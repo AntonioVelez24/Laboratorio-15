@@ -26,8 +26,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
-            Destroy(collision.gameObject);
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);           
             Destroy(gameObject);
             Destroy(explosion, 1);
         }
